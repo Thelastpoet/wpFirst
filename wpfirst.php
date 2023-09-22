@@ -15,6 +15,7 @@ function wp_first_activation() {
     // Delete Default Post and page
     wp_delete_post(1, TRUE); // Delete 'Hello World!' post
     wp_delete_post(2, TRUE); // Delete 'Sample Page' page
+    wp_delete_comment(1);   // Delete default comment
     
     // Setup Permalinks to 'Post name'
     update_option('permalink_structure', '/%postname%/');
